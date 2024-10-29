@@ -26,6 +26,10 @@ public class Acolhido {
         @Column(nullable = false, length = 100)
         private String nome;
 
+
+        @Column(nullable = false, length = 100)
+        private String email;
+
         @Column(nullable = false)
         @Temporal(TemporalType.DATE)
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
