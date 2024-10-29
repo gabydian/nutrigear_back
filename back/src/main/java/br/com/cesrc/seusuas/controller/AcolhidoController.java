@@ -14,6 +14,8 @@ import java.util.List;
 
 @RequestMapping(path="/acolhido")
 @RestController
+@CrossOrigin(origins = "http://localhost:5173/")
+
 public class AcolhidoController {
     private AcolhidoService acolhidoService;
     private AcolhidoRepository acolhidoRepository;
@@ -36,6 +38,7 @@ public class AcolhidoController {
 
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:5173/")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Void> salvarAcolhido(@RequestBody AcolhidoRequest acolhidoRequest){
         Acolhido acolhido = acolhidoRequest.toModel();
