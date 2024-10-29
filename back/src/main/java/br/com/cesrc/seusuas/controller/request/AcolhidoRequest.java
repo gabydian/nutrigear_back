@@ -12,6 +12,7 @@ import java.util.List;
 public class AcolhidoRequest {
     private Long id;
     private String nome;
+    private String email;
     private Date dataNascimento;
     private List<DocumentoRequest> documentos;
 
@@ -19,6 +20,7 @@ public class AcolhidoRequest {
         return Acolhido.builder()
                 .id(id)
                 .nome(nome)
+                .email(email)
                 .dataNascimento(dataNascimento)
                 .build();
     }
